@@ -1,0 +1,93 @@
+# task: gradually increase the pyramid of numbers from 0 to the specified number of rows
+
+a = list()
+c = 4  #riadkov
+d = 0
+for x in range(0, c):
+    a.append(d)
+    d= d + 1
+    print(a)
+print()
+
+
+
+
+#task: creating a tetrahedron from stars, an ascending and then descending pyramid from numbers
+
+a = int(input("zadaj pocet riadkov"))
+b = int(input("zadaj pocet stlpcov"))
+# c = int(input("zadaj o kolko maju rast cisla"))
+
+for h in range(0, b):
+    print("*"*a)
+print()
+for d in range(0, b + 1, 1):
+    for e in range(1, d + 1):
+        print(e, end="")
+    print()
+
+for f in range(b-1, 1, -1):
+    for g in range(1, f):
+        print(g, end="")
+    print()
+
+
+
+
+
+
+# task: sum using def
+
+def sum(a, b):
+    return (a + b)
+a = int(input('Enter 1st number: '))
+b = int(input('Enter 2nd number: '))
+print(f'Sum of {a} and {b} is {sum(a, b)}')
+
+
+
+
+
+# task: list the names one after the other by name and then by letter
+
+zoznam = list(('Miso', 'Frantisek', 'Anabela', 'Kefalin'))
+for vypis in zoznam:
+	print(vypis)
+print()
+for vypis in zoznam:
+	for vypis2 in vypis:
+    	print(vypis2)
+	print(" ")
+print()
+
+
+
+
+
+#task: add the salary for each name in the list
+
+zoznam = list(('Miso', 'Frantisek', 'Anabela', 'Kefalin'))
+nove_meno = str()
+velky_zoznam = dict()
+pocitadlo = 0
+max_pocitadlo = len(zoznam)
+print("pridaj postupne ku kazdemu menu vysku platu")
+
+for x in zoznam:
+    print("zadaj plat pre:", x)
+    y = input()
+    velky_zoznam[x] = y
+    print(velky_zoznam)
+print("hotovo")
+
+
+
+
+#task: print date and time
+
+import datetime
+def gettime ():
+	now = datetime.datetime.now()
+	return now.hour, now.minute, now.second + 1e-2 * now.microsecond
+hour, minute, second = gettime()
+print(f"sucasny cas je: {hour}:{minute}:{second}")
